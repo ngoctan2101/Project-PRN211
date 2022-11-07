@@ -1,6 +1,4 @@
-using Project_PRN211.Form;
-
-namespace Project_PRN211
+namespace MusicStore
 {
     internal static class Program
     {
