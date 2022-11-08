@@ -49,7 +49,67 @@ namespace MusicStore
             }
         }
 
+        private void btSaveCURD_Click(object sender, EventArgs e)
+        {
+            // ADD
+            if(id == -1)
+            {
+                // add Album
+                //Album album = new Album
+                //{
+                //    Title = tbTitleCRUD.Text,
+                //    Price = decimal.Parse(tbPriceCRUD.Text),
+                //    GenreId = context.Genres.Where(x=>x.Name == cbGenreCRUD.Text).Select(x=>x.GenreId).FirstOrDefault(),
+                //    ArtistId = context.Artists.Where(x=>x.Name == cbArtistCRUD.Text).Select(x=>x.ArtistId).FirstOrDefault(),
+                //    AlbumUrl = tbimageCRUD.Text,
 
+                //};
+                try
+                {
+                    Album album = new Album
+                    {
+                        Title = tbTitleCRUD.Text,
+                        Price = decimal.Parse(tbPriceCRUD.Text),
+                        GenreId = context.Genres.Where(x => x.Name == cbGenreCRUD.Text).Select(x => x.GenreId).FirstOrDefault(),
+                        ArtistId = context.Artists.Where(x => x.Name == cbArtistCRUD.Text).Select(x => x.ArtistId).FirstOrDefault(),
+                        AlbumUrl = tbimageCRUD.Text,
 
+                    };
+                    context.Albums.Add(album);
+                    context.SaveChanges();
+                    MessageBox.Show("Add thanh cong");
+                }
+                catch
+                {
+                    MessageBox.Show("Add failled");
+                }
+            }
+            // edit 
+            else
+            {
+                try
+                {
+                    // tim id 
+                    Album album = context.Albums.Find(id);
+                    album.Title = tbTitleCRUD.Text;
+                    album.Price = decimal.Parse(tbPriceCRUD.Text);
+                    album.GenreId = context.Genres.Where(x => x.Name == cbGenreCRUD.Text).Select(x => x.GenreId).FirstOrDefault();
+                    album.ArtistId = context.Artists.Where(x=>x.Name == cbArtistCRUD.Text).Select(x=>x.ArtistId).FirstOrDefault();
+                    album.AlbumUrl = tbimageCRUD.Text;
+                    context.Albums.Update(album);
+                    context.SaveChanges();
+                    MessageBox.Show("Edit thanh cong");
+                }
+                catch
+                {
+                    MessageBox.Show("Edit failled");
+                }
+            }
+        }
+
+        private void btCancle_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

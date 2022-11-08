@@ -112,9 +112,8 @@ namespace MusicStore
             CRUD crud = new CRUD(-1);
             DialogResult dr = crud.ShowDialog();
             if(dr == DialogResult.OK)
-            {
                 load();
-            }
+            
         }
         // search
         private void btSearch_Click(object sender, EventArgs e)
@@ -148,5 +147,7 @@ namespace MusicStore
             };
             dataGridView1.Columns.Insert(count + 1, delete);
         }
+
+
     }
 }

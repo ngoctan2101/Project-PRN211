@@ -112,21 +112,25 @@
             // 
             // btSaveCURD
             // 
+            this.btSaveCURD.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btSaveCURD.Location = new System.Drawing.Point(182, 434);
             this.btSaveCURD.Name = "btSaveCURD";
             this.btSaveCURD.Size = new System.Drawing.Size(94, 29);
             this.btSaveCURD.TabIndex = 9;
             this.btSaveCURD.Text = "Save";
             this.btSaveCURD.UseVisualStyleBackColor = true;
+            this.btSaveCURD.Click += new System.EventHandler(this.btSaveCURD_Click);
             // 
             // btCancle
             // 
+            this.btCancle.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btCancle.Location = new System.Drawing.Point(429, 434);
             this.btCancle.Name = "btCancle";
             this.btCancle.Size = new System.Drawing.Size(94, 29);
             this.btCancle.TabIndex = 10;
             this.btCancle.Text = "Cancel";
             this.btCancle.UseVisualStyleBackColor = true;
+            this.btCancle.Click += new System.EventHandler(this.btCancle_Click);
             // 
             // tbimageCRUD
             // 
