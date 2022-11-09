@@ -70,30 +70,36 @@
             this.shoppingToolStripMenuItem.Name = "shoppingToolStripMenuItem";
             this.shoppingToolStripMenuItem.Size = new System.Drawing.Size(87, 24);
             this.shoppingToolStripMenuItem.Text = "Shopping";
+            this.shoppingToolStripMenuItem.Click += new System.EventHandler(this.shoppingToolStripMenuItem_Click);
             // 
             // cartToolStripMenuItem
             // 
             this.cartToolStripMenuItem.Name = "cartToolStripMenuItem";
             this.cartToolStripMenuItem.Size = new System.Drawing.Size(50, 24);
             this.cartToolStripMenuItem.Text = "Cart";
+            this.cartToolStripMenuItem.Click += new System.EventHandler(this.cartToolStripMenuItem_Click);
             // 
             // loginToolStripMenuItem
             // 
             this.loginToolStripMenuItem.Name = "loginToolStripMenuItem";
             this.loginToolStripMenuItem.Size = new System.Drawing.Size(60, 24);
             this.loginToolStripMenuItem.Text = "Login";
+            this.loginToolStripMenuItem.Click += new System.EventHandler(this.loginToolStripMenuItem_Click);
             // 
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
             this.logoutToolStripMenuItem.Size = new System.Drawing.Size(70, 24);
             this.logoutToolStripMenuItem.Text = "Logout";
+            this.logoutToolStripMenuItem.Visible = false;
+            this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
             // albumsToolStripMenuItem
             // 
             this.albumsToolStripMenuItem.Name = "albumsToolStripMenuItem";
             this.albumsToolStripMenuItem.Size = new System.Drawing.Size(73, 24);
             this.albumsToolStripMenuItem.Text = "Albums";
+            this.albumsToolStripMenuItem.Visible = false;
             this.albumsToolStripMenuItem.Click += new System.EventHandler(this.albumsToolStripMenuItem_Click);
             // 
             // toolStripContainer1

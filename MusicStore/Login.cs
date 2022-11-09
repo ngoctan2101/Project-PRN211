@@ -37,14 +37,20 @@ namespace MusicStore
                 {
                     if(username.Equals(item.UserName) && pass.Equals(item.Password))
                     {
-
+                        Settings.UserName = item.UserName;
+                        Settings.Role = item.Role;
+                        this.Close();
+                        isUser = true;
                     }
                 }
                 foreach (User item in users)
                 {
                     if (username.Equals(item.UserName) && pass.Equals(item.Password))
                     {
-
+                        Settings.UserName = item.UserName;
+                        Settings.Role = item.Role;
+                        this.Close();
+                        isUser = true;
                     }
                 }
                 if(isUser == false)

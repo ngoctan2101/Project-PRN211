@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -36,6 +37,10 @@ namespace MusicStore
                 cbGenreCRUD.SelectedIndex = album.GenreId - 1;
                 cbArtistCRUD.Text = context.Artists.Where(x => x.ArtistId == album.ArtistId).Select(x=>x.Name).FirstOrDefault();
                 tbimageCRUD.Text = album.AlbumUrl;
+
+                //Graphics img = (Image)Graphics.FromImage(tbimageCRUD.Text);
+               
+                //pictureBox1.Image = Image.FromFile(tbimageCRUD.Text);
 
                 //try
                 //{
