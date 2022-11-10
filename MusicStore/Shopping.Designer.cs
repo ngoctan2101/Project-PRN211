@@ -63,6 +63,7 @@
             this.cbGenreShopping.Name = "cbGenreShopping";
             this.cbGenreShopping.Size = new System.Drawing.Size(151, 28);
             this.cbGenreShopping.TabIndex = 2;
+            this.cbGenreShopping.SelectedIndexChanged += new System.EventHandler(this.cbGenreShopping_SelectedIndexChanged);
             // 
             // tbTitleShopping
             // 
@@ -79,6 +80,7 @@
             this.btSearchShopping.TabIndex = 4;
             this.btSearchShopping.Text = "Search";
             this.btSearchShopping.UseVisualStyleBackColor = true;
+            this.btSearchShopping.Click += new System.EventHandler(this.btSearchShopping_Click);
             // 
             // panel1
             // 
@@ -95,6 +97,7 @@
             this.btPrevious.TabIndex = 6;
             this.btPrevious.Text = "Previous";
             this.btPrevious.UseVisualStyleBackColor = true;
+            this.btPrevious.Click += new System.EventHandler(this.btPrevious_Click);
             // 
             // btNext
             // 
@@ -104,12 +107,13 @@
             this.btNext.TabIndex = 7;
             this.btNext.Text = "Next";
             this.btNext.UseVisualStyleBackColor = true;
+            this.btNext.Click += new System.EventHandler(this.btNext_Click);
             // 
             // Shopping
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(901, 490);
+            this.ClientSize = new System.Drawing.Size(901, 597);
             this.Controls.Add(this.btNext);
             this.Controls.Add(this.btPrevious);
             this.Controls.Add(this.panel1);

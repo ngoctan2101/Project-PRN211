@@ -65,32 +65,34 @@ namespace MusicStore
             cart.Show();
         }
 
-        //private void MainGUI_Activated(object sender, EventArgs e)
-        //{
-
-        //    if (Settings.UserName != null && Settings.UserName != " ")
-        //    {
-        //        logoutToolStripMenuItem.Text = $"Logout({Settings.UserName})";
-        //    }
-        //    else
-        //    {
-        //        loginToolStripMenuItem.Text = $"Login";
-        //    }
-        //    if (Settings.Role == 1 && Settings.UserName != null && Settings.UserName != " ")
-        //    {
-        //        albumsToolStripMenuItem.Visible = true;
-        //        logoutToolStripMenuItem.Visible = true;
-        //        loginToolStripMenuItem.Visible = false;
-        //    }
-        //    else if (Settings.Role == 0 && Settings.UserName != null && Settings.UserName != " ")
-        //    {
-        //        albumsToolStripMenuItem.Visible = false;
-        //        loginToolStripMenuItem.Visible = false;
-        //        logoutToolStripMenuItem.Visible = true;
-        //    }
-        //    ShoppingCart cart = ShoppingCart.GetCart();
-        //    int count = cart.GetCount();
-        //    cartToolStripMenuItem.Text = $"Cart ({count})";
-        //}
+        private void Home_Activated(object sender, EventArgs e)
+        {
+            // neu login dung
+            if (Settings.UserName != null && Settings.UserName != " ")
+            {
+                logoutToolStripMenuItem.Text = $"Logout({Settings.UserName})";
+            }
+            else
+            {
+                loginToolStripMenuItem.Text = $"Login";
+            }
+            // tai khoan admin
+            if (Settings.Role == 1 && Settings.UserName != null && Settings.UserName != " ")
+            {
+                albumsToolStripMenuItem.Visible = true;
+                logoutToolStripMenuItem.Visible = true;
+                loginToolStripMenuItem.Visible = false;
+            }
+            // tai khoan user
+            else if (Settings.Role == 0 && Settings.UserName != null && Settings.UserName != " ")
+            {
+                albumsToolStripMenuItem.Visible = false;
+                loginToolStripMenuItem.Visible = false;
+                logoutToolStripMenuItem.Visible = true;
+            }
+            ShoppingCart cart = ShoppingCart.GetCart();
+            int count = cart.GetCount();
+            cartToolStripMenuItem.Text = $"Cart ({count})";
+        }
     }
 }
