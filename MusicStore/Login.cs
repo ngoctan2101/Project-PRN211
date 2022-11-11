@@ -37,8 +37,8 @@ namespace MusicStore
                 {
                     if(username.Equals(item.UserName) && pass.Equals(item.Password))
                     {
-                        Settings.UserName = item.UserName;
-                        Settings.Role = item.Role;
+                        Check.UserName = item.UserName;
+                        Check.Role = item.Role;
                         this.Close();
                         isUser = true;
                     }
@@ -47,8 +47,8 @@ namespace MusicStore
                 {
                     if (username.Equals(item.UserName) && pass.Equals(item.Password))
                     {
-                        Settings.UserName = item.UserName;
-                        Settings.Role = item.Role;
+                        Check.UserName = item.UserName;
+                        Check.Role = item.Role;
                         this.Close();
                         isUser = true;
                     }

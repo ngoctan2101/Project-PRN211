@@ -149,19 +149,19 @@ namespace MusicStore.Models
         // lay id cua cart
         public string GetCartId()
         {
-            if (Settings.CartId == null)
+            if (Check.CartId == null)
             {
                 // dung thi cartid lay ten thanh username 
                 // k thi radom
-                if (Settings.UserName != null)
-                    Settings.CartId = Settings.UserName;
+                if (Check.UserName != null)
+                    Check.CartId = Check.UserName;
                 else
                 {
                     Guid tempCartId = Guid.NewGuid();
-                    Settings.CartId = tempCartId.ToString();
+                    Check.CartId = tempCartId.ToString();
                 }
             }
-            return Settings.CartId;
+            return Check.CartId;
         }
         // change cartid thanh username
         public void ChangeName()
@@ -169,10 +169,10 @@ namespace MusicStore.Models
             var shoopingca = context.Carts.Where(x => x.CartId == ShoppingCartId);
             foreach (Cart item in shoopingca)
             {
-                item.CartId = Settings.UserName;
+                item.CartId = Check.UserName;
             }
             context.SaveChanges();
-            Settings.CartId = null;
+            Check.CartId = null;
         }
 
     }

@@ -202,6 +202,7 @@
             this.btSaveCheckout.TabIndex = 18;
             this.btSaveCheckout.Text = "Save";
             this.btSaveCheckout.UseVisualStyleBackColor = true;
+            this.btSaveCheckout.Click += new System.EventHandler(this.btSaveCheckout_Click);
             // 
             // btCancelCheckout
             // 
@@ -211,6 +212,7 @@
             this.btCancelCheckout.TabIndex = 19;
             this.btCancelCheckout.Text = "Cancel";
             this.btCancelCheckout.UseVisualStyleBackColor = true;
+            this.btCancelCheckout.Click += new System.EventHandler(this.btCancelCheckout_Click);
             // 
             // Checkout
             // 

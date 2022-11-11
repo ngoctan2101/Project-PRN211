@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MusicStore
 {
-    public class Settings
+    public class Check
     {
         // nhan biet name , cart, role 
         public static string UserName { get; set; }

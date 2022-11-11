@@ -16,7 +16,7 @@ namespace MusicStore
         MusicStoreContext context;
         ShoppingCart cart;
         PageList<Album> pageAlbum;
-        bool check = false;
+        
 
         public Shopping()
         {
@@ -37,7 +37,7 @@ namespace MusicStore
 
             panel1.Controls.Clear();
             int height = panel1.Height - 20;
-            int width = panel1.Width - 20/3;
+            int width = (panel1.Width - 20)/3;
             int i = 0;
             foreach(Album album in pageAlbum)
             {
@@ -101,8 +101,7 @@ namespace MusicStore
         // load panelSerach
         public void loadPanelSearch(int pageIndex)
         {
-            IQueryable<Album> albums = context.Albums.Where(x => x.Title
-            .Contains(tbTitleShopping.Text.Trim()));
+            IQueryable<Album> albums = context.Albums.Where(x => x.Title.Contains(tbTitleShopping.Text.Trim()));
 
             pageAlbum = PageList<Album>.Create(albums, pageIndex, 3);
             btPrevious.Enabled = pageAlbum.Previous;

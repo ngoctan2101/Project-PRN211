@@ -43,8 +43,8 @@ namespace MusicStore
             loginToolStripMenuItem.Visible = true;
             albumsToolStripMenuItem.Visible = false;
             cart = ShoppingCart.GetCart();
-            Settings.UserName = null;
-            Settings.CartId = null;
+            Check.UserName = null;
+            Check.CartId = null;
             cartToolStripMenuItem.Text = "Cart (0)";
         }
 
@@ -68,23 +68,23 @@ namespace MusicStore
         private void Home_Activated(object sender, EventArgs e)
         {
             // neu login dung
-            if (Settings.UserName != null && Settings.UserName != " ")
+            if (Check.UserName != null && Check.UserName != " ")
             {
-                logoutToolStripMenuItem.Text = $"Logout({Settings.UserName})";
+                logoutToolStripMenuItem.Text = $"Logout({Check.UserName})";
             }
             else
             {
                 loginToolStripMenuItem.Text = $"Login";
             }
             // tai khoan admin
-            if (Settings.Role == 1 && Settings.UserName != null && Settings.UserName != " ")
+            if (Check.Role == 1 && Check.UserName != null && Check.UserName != " ")
             {
                 albumsToolStripMenuItem.Visible = true;
                 logoutToolStripMenuItem.Visible = true;
                 loginToolStripMenuItem.Visible = false;
             }
             // tai khoan user
-            else if (Settings.Role == 0 && Settings.UserName != null && Settings.UserName != " ")
+            else if (Check.Role == 0 && Check.UserName != null && Check.UserName != " ")
             {
                 albumsToolStripMenuItem.Visible = false;
                 loginToolStripMenuItem.Visible = false;
